@@ -17,7 +17,7 @@ jobs:
           uses: "hacs/action@main"
           with:
             category: "integration"
-            ignore: brands
+            ignore: brands wheels
 
         - name: Hassfest validation
           uses: "home-assistant/actions/hassfest@master"
@@ -44,7 +44,9 @@ jobs:
         with:
           python-version: "3.8"
       - name: Install requirements
-        run: python3 -m pip install -r requirements.test.txt
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r requirements.test.txt
       - name: Run tests
         run: |
           pytest \
