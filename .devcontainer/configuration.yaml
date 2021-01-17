@@ -3,7 +3,12 @@ default_config:
 logger:
   default: info
   logs:
-    custom_components.facebook-messenger: debug
+    custom_components.facebook_messenger: debug
+
+notify:
+  - name: FCBTEST
+    platform: facebook_messenger
+    page_access_token: !secret page_access_token
 
 # If you need to debug uncomment the line below (doc: https://www.home-assistant.io/integrations/debugpy/)
 # debugpy:
