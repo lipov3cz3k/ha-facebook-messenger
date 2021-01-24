@@ -1,7 +1,7 @@
 {
   "codeowners": ["@lipov3cz3k"],
   "config_flow": false,
-  "dependencies": [],
+  "dependencies": ["http"],
   "documentation": "https://github.com/lipov3cz3k/ha-facebook-messenger",
   "domain": "facebook_messenger",
   "name": "Facebook Messenger",
